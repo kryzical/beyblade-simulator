@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <h1>Beyblade Arena</h1>
+
+    <table>
+        <tr valign="top">
+            <td><canvas id="webgl_canvas" width="600" height="600"></canvas></td>
+            <td>
+                <button id="startBtn">Start</button>
+                <button id="stopBtn">Stop</button>
+                <button id="resetBtn">Reset</button>
+                <button id="togglePyramidBtn">Hide Triangles</button>
+                <br><br>
+                <b>Bey 1</b>
+                <div>HP: <span id="energy">100%</span> <span id="bey1_hp_swatch"
+                        style="display:inline-block;width:12px;height:12px;border:1px solid #000;vertical-align:middle;margin-left:5px;"></span>
+                </div>
+                <label>Type:
+                    <select id="bey1Type">
+                        <option value="pegasus">Pegasus</option>
+                        <option value="wyvern">Wyvern</option>
+                        <option value="phoenix">Phoenix</option>
+                        <option value="achilles">Achilles</option>
+                        <option value="random">Random</option>
+                    </select>
+                </label>
+                <div>Defense: <span id="bey1_def">-</span>/5 <small id="bey1_def_phys">( - g )</small></div>
+                <div>Speed: <span id="bey1_spd">-</span>/5 <small id="bey1_spd_phys">( - m/s )</small></div>
+                <div>Attack: <span id="bey1_display">-</span>/5 <small id="bey1_atk_phys">( - )</small></div>
+                <div style="margin-top:8px">
+                    <span class="swatch bey1" data-color="#6633CC"
+                        style="display:inline-block;width:18px;height:18px;background:#6633CC;cursor:pointer;margin-right:4px"></span>
+                    <span class="swatch bey1" data-color="#33B333"
+                        style="display:inline-block;width:18px;height:18px;background:#33B333;cursor:pointer;margin-right:4px"></span>
+                    <span class="swatch bey1" data-color="#E64C3C"
+                        style="display:inline-block;width:18px;height:18px;background:#E64C3C;cursor:pointer;margin-right:4px"></span>
+                    <span class="swatch bey1" data-color="#FFAA00"
+                        style="display:inline-block;width:18px;height:18px;background:#FFAA00;cursor:pointer;margin-right:4px"></span>
+                    <span class="swatch bey1" data-color="#3366FF"
+                        style="display:inline-block;width:18px;height:18px;background:#3366FF;cursor:pointer"></span>
+                </div>
+                <br><br>
+                <b>Bey 2</b>
+                <div>HP: <span id="energy2">100%</span> <span id="bey2_hp_swatch"
+                        style="display:inline-block;width:12px;height:12px;border:1px solid #000;vertical-align:middle;margin-left:5px;"></span>
+                </div>
+                <label>Type:
+                    <select id="bey2Type">
+                        <option value="pegasus">Pegasus</option>
+                        <option value="wyvern">Wyvern</option>
+                        <option value="phoenix">Phoenix</option>
+                        <option value="achilles">Achilles</option>
+                        <option value="random">Random</option>
+                    </select>
+                </label>
+                <div>Defense: <span id="bey2_def">-</span>/5 <small id="bey2_def_phys">( - g )</small></div>
+                <div>Speed: <span id="bey2_spd">-</span>/5 <small id="bey2_spd_phys">( - m/s )</small></div>
+                <div>Attack: <span id="bey2_display">-</span>/5 <small id="bey2_atk_phys">( - )</small></div>
+                <div style="margin-top:8px">
+                    <span class="swatch bey2" data-color="#CC3333"
+                        style="display:inline-block;width:18px;height:18px;background:#CC3333;cursor:pointer;margin-right:4px"></span>
+                    <span class="swatch bey2" data-color="#33CCCC"
+                        style="display:inline-block;width:18px;height:18px;background:#33CCCC;cursor:pointer;margin-right:4px"></span>
+                    <span class="swatch bey2" data-color="#CC9933"
+                        style="display:inline-block;width:18px;height:18px;background:#CC9933;cursor:pointer;margin-right:4px"></span>
+                    <span class="swatch bey2" data-color="#9933CC"
+                        style="display:inline-block;width:18px;height:18px;background:#9933CC;cursor:pointer;margin-right:4px"></span>
+                    <span class="swatch bey2" data-color="#33CC66"
+                        style="display:inline-block;width:18px;height:18px;background:#33CC66;cursor:pointer"></span>
+                </div>
+                <br><br>
+                <div id="winner" style="font-weight:700">Winner: —</div>
+            </td>
+        </tr>
+    </table>
+
+    <script type="module" src="main.js"></script>
+</body>
+
+</html>
